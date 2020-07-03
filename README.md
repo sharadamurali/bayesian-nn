@@ -11,6 +11,8 @@ outputs = activation(matmul(inputs, kernel) + bias)
 
 The Flipout estimator performs a Monte Carlo approximation of the distribution, integrating over the kernel and the bias. In this application, the estimator minimizes the Evidence Lower Bound (ELBO) loss. It consists of two terms: the expected negative log-likelihood (which is approximated via Monte Carlo), and the KL Divergence. This estimator uses about twice as many operations as a traditional neural network, which results in increased runtimes compared to a traditional fully-connected DNN.
 
+<img src="https://github.com/sharadamurali/bayesian-nn/blob/master/images/bnn_loss.png?raw=true" alt="BNN Loss" width="400"> <img src="https://github.com/sharadamurali/bayesian-nn/blob/master/images/bnn_acc.png?raw=true" alt="BNN Acc" width="400">
+
 ## References
 
 [1] Radford M. Neal. Bayesian Learning for Neural Networks. Springer-Verlag, 1996.
